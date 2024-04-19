@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.view.activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_new_app"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="환영합니다, 점주님!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/inter_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_icon"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_background_black"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_tittle_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="LOGIN"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_regular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="매장명"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/black"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="23dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_tittle_login"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <EditText
+            android:id="@+id/edt_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/bg_editext_input"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            android:textCursorDrawable="@color/black"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_username"
+            app:layout_constraintEnd_toEndOf="@id/tv_tittle_login"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="PW"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/black"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="23dp"
+            app:layout_constraintTop_toBottomOf="@id/edt_username"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/bg_editext_input"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            android:textCursorDrawable="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_password"
+            app:layout_constraintEnd_toEndOf="@id/tv_tittle_login"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="60dp"
+            android:text="로그인"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/bg_button_login"
+            app:layout_constraintTop_toBottomOf="@id/edt_password"
+            app:layout_constraintStart_toStartOf="@id/edt_password"
+            app:layout_constraintEnd_toEndOf="@id/edt_password"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/black"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

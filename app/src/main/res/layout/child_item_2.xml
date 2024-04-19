@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="3dp"
+    app:cardElevation="3dp"
+    android:layout_marginBottom="10dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_order_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주문일시 :"
+            android:textSize="9sp"
+            android:paddingStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="#A8A8A8"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_order_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="202X년 XX월 XX일 XX시 XX분"
+            android:textSize="9sp"
+            android:textColor="#A8A8A8"
+            android:fontFamily="@font/inter_regular"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/tv_order_title"
+            app:layout_constraintTop_toTopOf="@id/tv_order_title"/>
+
+        <TextView
+            android:id="@+id/tv_voucher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="${vouchor_name}"
+            android:textSize="14sp"
+            android:paddingStart="5dp"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_order_title"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_used_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="${used_amount}원"
+            android:textSize="14sp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_voucher_name"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

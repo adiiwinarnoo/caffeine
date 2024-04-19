@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/conts_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90050101"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/img_popup"
+        android:layout_width="0dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_button_login"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:text="X"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/img_popup"
+        app:layout_constraintTop_toTopOf="@id/img_popup" />
+
+    <TextView
+        android:id="@+id/tvTittlePopup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="영업 종료, 영업 일시종료 하시겠습니까?"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/img_popup"
+        app:layout_constraintBottom_toTopOf="@id/linear_button"
+        app:layout_constraintStart_toStartOf="@id/img_popup"
+        app:layout_constraintTop_toTopOf="@id/img_popup" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/img_popup"
+        app:layout_constraintStart_toStartOf="@id/img_popup"
+        app:layout_constraintEnd_toEndOf="@id/img_popup">
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="15dp"
+            android:text="영업 일시종료"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/inter_regular"
+            android:background="@drawable/bg_button_login"/>
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="영업 종료"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/inter_regular"
+            android:background="@drawable/bg_button_login"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "1073098557489",
+    "project_id": "caffeine-19272",
+    "storage_bucket": "caffeine-19272.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073098557489:android:5e46d00c729066d35dad10",
+        "android_client_info": {
+          "package_name": "com.caffeineism"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzEbcUDY0SWzffDBYqYNIDoXuoUbAgtJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073098557489:android:be7f2f903a02ca055dad10",
+        "android_client_info": {
+          "package_name": "com.example.caffeinapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzEbcUDY0SWzffDBYqYNIDoXuoUbAgtJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073098557489:android:07948287873b59b85dad10",
+        "android_client_info": {
+          "package_name": "com.restaurant.caffeinapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzEbcUDY0SWzffDBYqYNIDoXuoUbAgtJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,23 @@
+# Default ignored files
+/app/build
+/shelf/
+/workspace.xml
+*.iml
+.gradle
+/.gradle
+/.idea
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+/app/release
+local.properties
+/app/src/main/res/drawable/ic_spinner/Music/Lagu 2000.mp3

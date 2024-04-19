@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">카페인중독 점주용</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="next"><u>자세히 보기></u>.</string>
+
+    <string-array name="status_order">
+        <item>새로 들어온 주문</item>
+        <item>진행중인 주문</item>
+        <item>필터</item>
+    </string-array>
+
+    <string-array name="latest_order">
+        <item>오래된 순</item>
+        <item>최신순</item>
+    </string-array>
+    <string-array name="year">
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <!--    <string-array name="date">-->
+    <!--        <item>01</item>-->
+    <!--        <item>02</item>-->
+    <!--        <item>03</item>-->
+    <!--        <item>04</item>-->
+    <!--        <item>05</item>-->
+    <!--        <item>06</item>-->
+    <!--        <item>07</item>-->
+    <!--        <item>08</item>-->
+    <!--        <item>09</item>-->
+    <!--        <item>10</item>-->
+    <!--        <item>11</item>-->
+    <!--        <item>12</item>-->
+    <!--        <item>13</item>-->
+    <!--        <item>14</item>-->
+    <!--        <item>15</item>-->
+    <!--        <item>16</item>-->
+    <!--        <item>17</item>-->
+    <!--        <item>18</item>-->
+    <!--        <item>19</item>-->
+    <!--        <item>20</item>-->
+    <!--        <item>21</item>-->
+    <!--        <item>22</item>-->
+    <!--        <item>23</item>-->
+    <!--        <item>24</item>-->
+    <!--        <item>25</item>-->
+    <!--        <item>26</item>-->
+    <!--        <item>27</item>-->
+    <!--        <item>28</item>-->
+    <!--        <item>29</item>-->
+    <!--        <item>30</item>-->
+    <!--        <item>31</item>-->
+    <!--    </string-array>-->
+
+    <string-array name="dummy_notice_date">
+        <item>1 [날짜]</item>
+        <item>2 [날짜]</item>
+        <item>3 [날짜]</item>
+        <item>4 [날짜]</item>
+        <item>5 [날짜]</item>
+    </string-array>
+
+    <string-array name="dummy_notice_title">
+        <item>[제목]</item>
+        <item>[제목]</item>
+        <item>[제목]</item>
+        <item>[제목]</item>
+        <item>[제목]</item>
+    </string-array>
+
+
+    <string-array name="dummy_income_date">
+        <item>1 dd일</item>
+        <item>2 dd일</item>
+        <item>3 dd일</item>
+        <item>4 dd일</item>
+        <item>5 dd일</item>
+        <item>6 dd일</item>
+        <item>7 dd일</item>
+        <item>8 dd일</item>
+        <item>9 dd일</item>
+        <item>10 dd일</item>
+    </string-array>
+
+    <string-array name="dummy_income">
+        <item>포장주문</item>
+        <item>포장주문</item>
+        <item>포장주문</item>
+        <item>포장주문</item>
+        <item>포장주문</item>
+        <item>포장주문</item>
+        <item>포장주문</item>
+        <item>포장주문</item>
+        <item>포장주문</item>
+        <item>포장주문</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.activity.HomeActivity">
+
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/black"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <include
+        android:id="@+id/layout_tittle_bar"
+        layout="@layout/item_tittle_bar"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_scan"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_button_login"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_tittle_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/img_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_camera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tv_camera"/>
+
+        <TextView
+            android:id="@+id/tv_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="상품코드스캔"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_camera"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/button_filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/btn_scan"
+        app:layout_constraintEnd_toEndOf="@id/btn_scan"
+        app:layout_constraintTop_toBottomOf="@id/btn_scan">
+
+        <TextView
+            android:id="@+id/all_order"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_login"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="전체"/>
+        <TextView
+            android:id="@+id/pickup_order"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_login"
+            android:textColor="@color/black"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="픽업"/>
+        <TextView
+            android:id="@+id/delivery_order"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/bg_button_login"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_regular"
+            android:text="배달"/>
+        <TextView
+            android:id="@+id/dine_in"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/bg_button_login"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_regular"
+            android:text="홀"/>
+
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/button_filter"
+        android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/button_filter"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_new_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginStart="20dp"
+                android:text="새로 들어온 주문"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter_regular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_new_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_new_order"/>
+
+            <TextView
+                android:id="@+id/tv_progress_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="진행중인 주문"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/black"
+                android:layout_marginTop="13dp"
+                app:layout_constraintTop_toBottomOf="@id/recycler_new_order"
+                app:layout_constraintStart_toStartOf="@id/tv_new_order"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_progress_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_progress_order"/>
+
+            <TextView
+                android:id="@+id/tv_complete_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="완료된 주문"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/black"
+                android:layout_marginTop="13dp"
+                app:layout_constraintTop_toBottomOf="@id/recycler_progress_order"
+                app:layout_constraintStart_toStartOf="@id/tv_new_order"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_complete_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_complete_order"/>
+
+            <TextView
+                android:id="@+id/tv_rejected_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주문 취소"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/black"
+                android:layout_marginTop="13dp"
+                app:layout_constraintTop_toBottomOf="@id/recycler_complete_order"
+                app:layout_constraintStart_toStartOf="@id/tv_new_order"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_reject_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="230dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_rejected_order"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

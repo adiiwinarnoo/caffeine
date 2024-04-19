@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/conts_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90050101"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/img_popup"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="90dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"/>
+    <ImageView
+        android:id="@+id/img_popup2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#90050101"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_popup"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/tvTittlePopup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="브론즈 이상 등급이 필요합니다."
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="@id/img_popup"
+        app:layout_constraintStart_toStartOf="@id/img_popup"
+        app:layout_constraintTop_toTopOf="@id/img_popup" />
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_scan"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/bg_button_login"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="@id/img_popup"
+        app:layout_constraintTop_toBottomOf="@id/tvTittlePopup">
+
+        <ImageView
+            android:id="@+id/img_camera"
+            android:layout_width="19dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_camera_black"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상품코드스캔"
+            android:fontFamily="@font/inter_regular"
+            android:layout_marginEnd="15dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_processing_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="주문처리"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_scan"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tv_new_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="새로 들어온 주문"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_processing_order"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tv_progress_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:text="진행중인 주문"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_new_order"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tv_complete_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:text="완료 주문"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_progress_order"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tv_inventory_management"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:text="재고관리"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_complete_order"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="공지사항"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_inventory_management"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tv_inquiry_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="문의전화"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_notice"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tv_income_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="기간별 매출 현황"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_inquiry_call"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tv_income_by_subscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="구독권 사용내역 (현장)"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_income_order"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tv_income_by_coupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="기프티콘 사용내역 (현장)"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_income_by_subscribe"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tv_income_by_voucher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="상품권 사용내역 (현장)"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_income_by_coupon"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="로그아웃"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_income_by_voucher"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tv_store_open_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="50dp"
+        android:text="영업 시작"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swOnOff"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="20sp"
+        android:layout_marginEnd="20dp"
+        android:thumb="@drawable/custom_thumb"
+        app:layout_constraintEnd_toEndOf="@id/img_popup"
+        app:layout_constraintBottom_toBottomOf="@id/tv_store_open_close"
+        app:layout_constraintTop_toTopOf="@id/tv_store_open_close"
+        app:showText="false"
+        app:track="@drawable/custom_track" />
+
+    <TextView
+        android:id="@+id/tv_delete_system_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="39dp"
+        android:text="로그인 날짜 XX년 XX월 XX일 XX시 XX분"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="9sp"
+        android:visibility="invisible"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/img_popup"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
